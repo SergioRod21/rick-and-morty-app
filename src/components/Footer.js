@@ -3,9 +3,9 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-    <div class="mt-16 border-t border-gray-100 pt-8">
+    <div class="mt-8 border-t border-gray-100 pt-6">
       <p class="text-center text-xs leading-relaxed text-gray-500">
-        <br /> Created with
+    Created with
         <a
         target={"_blank"}
           href="https://rickandmortyapi.com/"
@@ -13,7 +13,7 @@ function Footer() {
         by
         <a
         target={"_blank"}
-          href=""
+          href="https://github.com/SergioRod21"
           class="text-gray-700 underline transition hover:text-gray-700/75"> SR </a>
       </p>
     </div>
