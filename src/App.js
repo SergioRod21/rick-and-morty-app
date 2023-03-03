@@ -18,6 +18,11 @@ console.log("page number " + pageNumber);
     }
   getData()
   }, [api])
+
+function handleNextPage() {
+  setpageNumber(++pageNumber);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
   return (
     <div className="App">
       <Header/>
@@ -31,7 +36,7 @@ console.log("page number " + pageNumber);
           <button onClick={() => setpageNumber(--pageNumber)} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
             Prev
           </button>
-          <button onClick={() => setpageNumber(++pageNumber)} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+          <button onClick={() => handleNextPage(pageNumber)} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
             Next
           </button>
         </div>
