@@ -1,9 +1,12 @@
 import React from 'react'
-
+import Header from './Header';
+import App from '../App';
+import { useState , useEffect } from 'react';
 
 const Card = ({results}) => {
 let cardDisplay;
-console.log(results);
+
+
 if (results) {
   cardDisplay = results.map((x) => {
 let {id, name, location, species, image} = x;
