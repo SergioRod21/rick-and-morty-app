@@ -13,9 +13,7 @@ let {id, name, location, species, image} = x;
     return (
       <div key={id} className= 'flex flex-col border-2 border-green-500 font-semibold rounded'>
         <img src={image} alt={name} className=" object-contain"/>
-        <h2>{name}</h2>
-        <h2>{species}</h2>
-        <h2>{location.name}</h2>
+        <h2 className='underline py-2 text-xl'>{name}</h2>
       </div>
     )
   })
