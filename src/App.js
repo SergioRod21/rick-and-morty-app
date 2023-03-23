@@ -5,12 +5,16 @@ import Card from './components/Card.js';
 import Footer from './components/Footer.js';
 import { BrowserRouter, Link, Route, Switch  } from 'react-router-dom';
 
-
 function App() {;
   let [pageNumber, setpageNumber] = useState(1);
   let [fetchedData, updateFetchedData] = useState({});
   let { info, results } = fetchedData;
   const [inputValue, setInputValue] = useState("");
+  const [characterId, setCharacterId] = useState(1);
+
+useEffect(() => {
+  console.log("id de personaje actual: ", characterId);
+}, [characterId]);
 
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${inputValue}`;
   useEffect(() => {
@@ -33,15 +37,14 @@ function handleNextPage() {
   };
 
 
-
-
   return (
     <div className="App">
     <BrowserRouter>
       <Header onChange={handleInputChange} setpageNumber = {setpageNumber} />
       <div className="flex justify-center">
       <div className="w-11/12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:w-4/5 lg:w-3/5">
-      <Card results={results}/>
+      <h3>Id actual: {characterId}</h3>
+      <Card results={results} characterId={characterId} setCharacterId={setCharacterId}/>
       </div>
       </div>
       <div className='flex justify-center items-center mt-8'>

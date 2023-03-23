@@ -1,5 +1,6 @@
 import React, { useState , useEffect } from 'react'
 import logo from '../images/Rick-and-Morty.png'
+import { Link  } from 'react-router-dom';
 
 const Header = (props) => {
   const [inputValue, setInputValue] = useState('');
@@ -14,7 +15,9 @@ const Header = (props) => {
 
   return (
     <div className='flex flex-col w-screen justify-between items-center px-4 py-6'>
-      <img className='w-3/6 md:w-2/5 lg:w-2/6 xl:w-1/6' src={logo} alt="" srcset="" />
+    <Link to="/" className='w-3/6 md:w-2/5 lg:w-2/6 xl:w-1/6'>
+      <img className='' src={logo} alt="" srcset="" />
+    </Link>
       <div className='w-2/4'>
       <form class="flex items-center">
           <label for="simple-search" class="sr-only">Search</label>
