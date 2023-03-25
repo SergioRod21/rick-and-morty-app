@@ -15,10 +15,10 @@ const Header = (props) => {
 
   return (
     <div className='flex flex-col w-screen justify-between items-center px-4 py-6'>
-    <Link to="/" className='w-3/6 md:w-2/5 lg:w-2/6 xl:w-1/6'>
+    <Link to="/" className='w-3/5 md:w-2/5 lg:w-2/6 xl:w-1/6'>
       <img className='' src={logo} alt="" srcset="" />
     </Link>
-      <div className='w-2/4'>
+      <div className='w-3/4 md:w-2/4'>
       <form class="flex items-center">
           <label for="simple-search" class="sr-only">Search</label>
           <div class="relative w-full">
